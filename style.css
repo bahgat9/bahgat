@@ -130,14 +130,14 @@ img {
         top: 50%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 35vw; /* Adjust width for better mobile fit */
+        width: 50vw; /* Adjust width for better mobile fit */
         height: auto;
         z-index: -1;
     }
 
     #special-gif2 {
         position: fixed;
-        top: 50%;
+        top: 68%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
         width: 30vw; /* Adjust width for mobile */
@@ -148,13 +148,14 @@ img {
     /* Adjusting the logo position */
     .logo {
         position: absolute;
-        top: 5vh; /* Centered at the top of the screen */
+        top: 10%; /* Position the logo 10% from the top of the screen */
         left: 50%;
         transform: translateX(-50%); /* Center horizontally */
-        width: 15vw; /* Smaller size for mobile */
+        width: 20vw; /* Increased size for mobile */
         height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
     }
+    
 
     /* Adjust wrapper position to sit just under the logo */
     .wrapper {
