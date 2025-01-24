@@ -149,15 +149,15 @@ img {
     }
 
     /* Adjusting the logo position */
-     .logo {
+      .logo {
         position: fixed;
-        top: calc(20vh - 8vw); /* Adjust top value to be above the title */
+        top: -10vh; /* Adjust to place it slightly below the top of the screen, or above the text */
         left: 50%;
-        transform: translateX(-50%);
-        width: 28vw;
-        height: auto;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 28vw; /* Adjust size for mobile */
+        height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
-        z-index: 10;
+        z-index: 10; /* Optional: Ensure the logo is above other content */
     }
 
     /* Adjust wrapper position to sit just under the logo */
