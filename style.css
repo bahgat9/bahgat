@@ -134,7 +134,7 @@ img {
     /* Adjusting the logo position */
     .logo {
         position: absolute;
-        top: -95px; /* Adjust as needed */
+        top: -135px; /* Adjust as needed */
         left: 50%; /* Center horizontally */
         transform: translateX(-50%);
         width: 120px; /* Smaller size for mobile */
