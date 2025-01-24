@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     padding: 0;
     margin: 0;
@@ -5,220 +6,149 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Body Styling */
 body {
     height: 100vh;
     background-image: linear-gradient(-225deg, #000000 0%, #000000 53%, #000000 100%);
 }
 
+/* Logo Styling */
 .logo {
-    position: absolute;
-    top: -30px; /* Adjust as needed */
-    left: -70%;
-    transform: translateX(-50%);
-    width: 120px; /* 20% bigger than the original 100px */
-    height: 120px; /* Maintain square aspect ratio */
-    border-radius: 50%; /* Make the logo round */
+    position: fixed;
+    top: 2vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 25vw; /* Adjust for mobile size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Round logo */
+    z-index: 10; /* Ensure visibility */
 }
 
+/* Wrapper Styling */
 .wrapper {
     width: 90%;
-    max-width: 35.37em;
-    max-height: 90vh;
+    max-width: 90vw;
+    max-height: 85vh;
     background-color: #ffffff;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    padding: 3em;
+    padding: 2em;
     border-radius: 1em;
     box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
 }
 
+/* Wrapper Title */
 .wrapper > h1 {
-    font-size: 1.8em;
+    font-size: 1.2em; /* Adjusted for mobile */
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
+/* Container Styling */
 .container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
+/* Wheel Styling */
 #wheel {
-    max-height: inherit;
-    width: 100%;
-    top: 0;
+    width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
     padding: 0;
 }
 
-@keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
+/* Spin Button */
 #spin-btn {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    height: 25%;
-    width: 25%;
+    height: 20%; /* Adjust for smaller size */
+    width: 20%; /* Responsive size */
     border-radius: 50%;
     cursor: pointer;
-    border: 0;
+    border: none;
     background: #484848;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
+    font-size: 1em; /* Smaller font size */
     font-weight: 600;
+    letter-spacing: 0.05em; /* Slightly reduced spacing */
 }
 
+/* Image Styling */
 img {
     position: absolute;
-    width: 4em;
+    width: 3em; /* Reduced size */
     top: 45%;
     right: -8%;
 }
 
+/* Final Value Text */
 #final-value {
-    font-size: 1.5em;
+    font-size: 1em; /* Adjusted for mobile */
     text-align: center;
-    margin-top: 1.5em;
+    margin-top: 1em;
     color: #000000;
     font-weight: 500;
 }
-#special-gif {
+
+/* Special GIF Adjustments */
+#special-gif, #special-gif2 {
     position: fixed;
     top: 50%;
-    right: 20%; /* Position it a little to the left (adjust as needed) */
-    transform: translateY(-50%); /* Center vertically */
-    width: 1000px; /* 40% bigger than 150px, so 150 * 1.4 = 210px */
-    height: 1200; /* Maintain aspect ratio */
-    z-index: -1; /* Ensure it's below the wrapper and other elements */
-}
-#special-gif2 {
-    position: fixed;
-    top: 50%;
-    right: 0%; /* Position it a little to the left (adjust as needed) */
-    transform: translateY(-50%); /* Center vertically */
-    width: 400px; /* 40% bigger than 150px, so 150 * 1.4 = 210px */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw; /* Adjusted width */
     height: auto; /* Maintain aspect ratio */
-    z-index: 9978; /* Ensure it's below the wrapper and other elements */
+    z-index: -1; /* Keep below other elements */
 }
 
+/* Message Text */
 #message {
     position: absolute;
-    left: 30px; /* Adjust the position from the left edge */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Ensure it is centered vertically */
-    color: white; /* White text */
-    font-size: 20px; /* Adjust font size as needed */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a dark background for contrast */
-    padding: 10px; /* Optional: padding for spacing */
-    border-radius: 5px; /* Optional: rounded corners */
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    font-size: 14px; /* Smaller font size */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    border-radius: 5px;
 }
 
-/* Adjustments for mobile devices */
-@media screen and (max-width: 896px) {
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-    }
-    
-    body {
-        height: 100vh;
-        background-image: linear-gradient(-225deg, #000000 0%, #000000 53%, #000000 100%);
-    }
-    
-    /* Adjustments for the Logo */
+/* Adjustments for Mobile Screens */
+@media screen and (max-width: 768px) {
     .logo {
-        position: fixed;
-        top: 1vh;
-        left: 50%;
-        transform: translate(-50%, -60%);
-        width: 15vw;
-        max-width: 120px;
-        height: auto;
-        border-radius: 50%;
-        z-index: 10;
+        width: 20vw; /* Smaller size for mobile */
     }
-    
-    /* Wrapper Styling */
+
     .wrapper {
-        width: 90%;
-        max-width: 35.37em;
-        background-color: #ffffff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 3em;
-        border-radius: 1em;
-        box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+        width: 85%;
+        padding: 1.5em;
     }
-    
+
     .wrapper > h1 {
-        font-size: clamp(1.5em, 3vw, 1.8em);
-        text-align: center;
-        margin-bottom: 20px;
+        font-size: 1em;
     }
-    
-    /* Spin Button */
+
     #spin-btn {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        left: 50%;
-        height: 20%;
-        width: 20%;
-        border-radius: 50%;
-        cursor: pointer;
-        border: 0;
-        background: #484848;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-size: 1.2em;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-    }
-    
-    /* GIF Styling */
-    #special-gif {
-        position: fixed;
-        top: 50%;
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%);
-        width: 380; /* Adjust width for better mobile fit */
-        height: 190vw;
-        z-index: -1;
+        height: 18%; /* Adjusted size */
+        width: 18%;
+        font-size: 0.9em;
     }
 
-    #special-gif2 {
-        position: fixed;
-        top: 50%;
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%);
-        width: 30vw; /* Adjust width for mobile */
-        height: auto;
-        z-index: 9978;
-    }
-    
-    /* Final Value Text */
     #final-value {
-        font-size: clamp(1em, 2.5vw, 1.5em);
-        text-align: center;
-        margin-top: 1.5em;
-        color: #000000;
-        font-weight: 500;
+        font-size: 0.9em;
     }
-    
+
+    #wheel {
+        width: 100%;
+    }
+
+    #special-gif, #special-gif2 {
+        width: 35vw; /* Even smaller for mobile */
+    }
 }
-
-
-
