@@ -121,6 +121,9 @@ img {
     padding: 10px; /* Optional: padding for spacing */
     border-radius: 5px; /* Optional: rounded corners */
 }
+.game-title {
+    margin-top: 20vh; /* Adjust margin to push the game title down */
+}
 
 /* Adjustments for mobile devices */
 @media screen and (max-width: 896px) {
@@ -148,13 +151,13 @@ img {
     /* Adjusting the logo position */
      .logo {
         position: fixed;
-        top: 10vh; /* Adjust to place it slightly below the top of the screen, or above the text */
+        top: calc(20vh - 8vw); /* Adjust top value to be above the title */
         left: 50%;
-        transform: translateX(-50%); /* Center horizontally */
-        width: 28vw; /* Adjust size for mobile */
-        height: auto; /* Maintain aspect ratio */
+        transform: translateX(-50%);
+        width: 28vw;
+        height: auto;
         border-radius: 50%;
-        z-index: 10; /* Optional: Ensure the logo is above other content */
+        z-index: 10;
     }
 
     /* Adjust wrapper position to sit just under the logo */
