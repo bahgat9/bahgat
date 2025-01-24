@@ -12,12 +12,13 @@ body {
 
 .logo {
     position: absolute;
-    top: -30px; /* Adjust as needed */
-    left: -70%;
-    transform: translateX(-50%);
+    top: 10px; /* Adjusted to position above the wrapper */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
     width: 80px; /* Smaller size for mobile */
     height: 80px; /* Maintain square aspect ratio */
     border-radius: 50%; /* Make the logo round */
+    z-index: 10; /* Ensure the logo is above other content */
 }
 
 .wrapper {
@@ -94,22 +95,22 @@ img {
 
 #special-gif {
     position: fixed;
-    top: 50%;
-    right: 20%; /* Position it a little to the left (adjust as needed) */
-    transform: translateY(-50%); /* Center vertically */
-    width: 800px; /* Smaller size for mobile */
-    height: auto; /* Maintain aspect ratio */
+    top: 0; /* Cover the whole screen */
+    left: 0; /* Cover the whole screen */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     z-index: -1; /* Ensure it's below the wrapper and other elements */
+    display: none; /* Initially hidden */
 }
 
 #special-gif2 {
     position: fixed;
     top: 50%;
-    right: 0%; /* Position it a little to the left (adjust as needed) */
-    transform: translateY(-50%); /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
     width: 300px; /* Smaller size for mobile */
     height: auto; /* Maintain aspect ratio */
-    z-index: 9978; /* Ensure it's below the wrapper and other elements */
+    z-index: 9978; /* Ensure it's above the special GIF */
 }
 
 #message {
@@ -126,43 +127,26 @@ img {
 
 /* Adjustments for mobile devices */
 @media screen and (max-width: 896px) {
-    /* Centering special GIF and special GIF 2 for mobile */
+    /* Centering special GIF for mobile */
     #special-gif {
-        position: fixed;
-        top: 50%;
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%);
-        width: 300px; /* Adjust width for better mobile fit */
-        height: auto; /* Maintain aspect ratio */
-        z-index: -1;
-    }
-
-    #special-gif2 {
-        position: fixed;
-        top: 50%;
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%);
-        width: 200px; /* Adjust width for mobile */
-        height: auto;
-        z-index: 9978;
+        display: block; /* Show the special GIF */
     }
 
     /* Adjusting the logo position */
     .logo {
-        position: fixed;
-        top: 1vh; /* Adjust to place it slightly below the top of the screen, or above the text */
-        left: 50%;
+        position: absolute;
+        top: 10px; /* Position above the wrapper */
+        left: 50%; /* Center horizontally */
         transform: translateX(-50%); /* Center horizontally */
-        width: 25vw; /* Adjust size for mobile */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 50%;
-        z-index: 10; /* Optional: Ensure the logo is above other content */
+        width: 80px; /* Smaller size for mobile */
+        height: 80px; /* Maintain square aspect ratio */
+        z-index: 10; /* Ensure the logo is above other content */
     }
 
     /* Adjust wrapper position to sit just under the logo */
     .wrapper {
         position: absolute;
-        top: 15vh; /* Push wrapper under the logo */
+        top: 20vh; /* Push wrapper under the logo */
         left: 50%;
         transform: translateX(-50%);
         width: 85vw; /* Smaller for mobile */
