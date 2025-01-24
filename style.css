@@ -148,9 +148,9 @@ img {
     /* Adjusting the logo position */
     .logo {
         position: fixed;
-        bottom: 90vh; /* Centered at the top of the screen */
+         /* Centered at the top of the screen */
         left: 50%;
-        transform: translateX(-50%); /* Center horizontally */
+        transform: translateX(-50%,-80%); /* Center horizontally */
         width: 15vw; /* Smaller size for mobile */
         height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
@@ -207,37 +207,4 @@ img {
 
 
 
-@media screen and (max-width: 480px) {
-    /* Small mobile devices adjustments */
-    #special-gif {
-        width: 40vw; /* Adjust to smaller mobile screens */
-    }
 
-    #special-gif2 {
-        width: 40vw; /* Adjust to smaller mobile screens */
-    }
-
-    /* Adjust wrapper for very small devices */
-    .wrapper {
-        top: 18vh; /* Ensure wrapper sits just below the logo on small screens */
-    }
-
-    /* Spin button for smaller devices */
-    #spin-btn {
-        height: 18%;
-        width: 18%;
-        font-size: 1em;
-    }
-
-    /* Smaller font size for final value */
-    #final-value {
-        font-size: 1em;
-        margin-top: 0.8em;
-    }
-
-    /* Logo adjustments for small screens */
-    .logo {
-        top: 4vh; /* Position the logo slightly higher on smaller screens */
-        width: 18vw; /* Slightly larger for very small screens */
-    }
-}
