@@ -148,7 +148,7 @@ img {
     /* Adjusting the logo position */
      .logo {
         position: fixed;
-        top: env(safe-area-inset-top); /* Adjust to be below the notch */
+        bottom:-90% /* Adjust to be below the notch */
         left: 50%;
         transform: translateX(-50%); /* Center horizontally */
         width: 28vw; /* Adjust size for mobile */
