@@ -130,8 +130,8 @@ img {
         top: 50%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 896vw; /* Adjust width for better mobile fit */
-        height: 300vw;
+        width: 500vw; /* Adjust width for better mobile fit */
+        height: 200vw;
         z-index: -1;
     }
 
@@ -150,8 +150,8 @@ img {
         position: fixed;
          /* Centered at the top of the screen */
         left: 50%;
-        transform: translateX(-50%,-80%); /* Center horizontally */
-        width: 15vw; /* Smaller size for mobile */
+        transform: translateX(-50%,-95%); /* Center horizontally */
+        width: 40vw; /* Smaller size for mobile */
         height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
     }
