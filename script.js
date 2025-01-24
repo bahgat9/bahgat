@@ -50,6 +50,12 @@ let myChart = new Chart(wheel, {
                 color: "#ffffff",
                 formatter: (_, context) => context.chart.data.labels[context.dataIndex],
                 font: { size: 24 },
+                         if (window.innerWidth <= 768) 
+                         {
+                            myChart.options.plugins.datalabels.font.size = 16; // Smaller size for mobile
+                            myChart.update();
+                         }
+
             },
         },
     },
