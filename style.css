@@ -130,51 +130,51 @@ img {
         top: 50%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 50vw; /* Adjust width for better mobile fit */
+        width: 30vw; /* Adjust width for better mobile fit */
         height: auto;
-        z-index: -1;
+        z-index: 1; /* Slightly adjust z-index for better layering */
     }
 
     #special-gif2 {
         position: fixed;
-        top: 68%;
+        top: 50%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 30vw; /* Adjust width for mobile */
+        width: 25vw; /* Adjust width for mobile */
         height: auto;
-        z-index: 9978;
+        z-index: 2; /* Ensures it stays on top of the first GIF */
     }
 
     /* Adjusting the logo position */
     .logo {
         position: absolute;
-        top: 10%; /* Position the logo 10% from the top of the screen */
+        top: 5vh; /* Centered at the top of the screen */
         left: 50%;
         transform: translateX(-50%); /* Center horizontally */
-        width: 20vw; /* Increased size for mobile */
-        height: auto; /* Maintain aspect ratio */
+        width: 13vw; /* Slightly smaller size for mobile */
+        height: auto;
         border-radius: 50%;
     }
-    
 
     /* Adjust wrapper position to sit just under the logo */
     .wrapper {
         position: absolute;
-        top: 15vh; /* Push wrapper under the logo */
+        top: 18vh; /* Slightly more space for the wrapper */
         left: 50%;
         transform: translateX(-50%);
         width: 85vw; /* Smaller for mobile */
         max-width: 90vw;
         background-color: #ffffff;
-        padding: 1.5em;
+        padding: 1.2em; /* Adjusted padding for mobile */
         border-radius: 1em;
-        box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+        box-shadow: 0 3em 4em rgba(27, 8, 53, 0.2);
     }
 
     /* Heading inside the wrapper */
     .wrapper > h1 {
-        font-size: 1.5em;
+        font-size: 1.3em; /* Slightly smaller font */
         margin-bottom: 1em;
+        text-align: center;
     }
 
     /* Spin button for mobile */
@@ -183,28 +183,29 @@ img {
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        height: 20%;
-        width: 20%;
+        height: 15%; /* Slightly smaller for mobile */
+        width: 15%;
         border-radius: 50%;
         cursor: pointer;
         border: 0;
         background: #484848;
         color: #ffffff;
         text-transform: uppercase;
-        font-size: 1.2em;
+        font-size: 1em; /* Smaller font for mobile */
         font-weight: 600;
         letter-spacing: 0.1em;
     }
 
     /* Final value text */
     #final-value {
-        font-size: 1.2em;
+        font-size: 1.1em; /* Slightly smaller for better fitting */
         text-align: center;
         margin-top: 1em;
         color: #000000;
         font-weight: 500;
     }
 }
+
 
 @media screen and (max-width: 480px) {
     /* Small mobile devices adjustments */
