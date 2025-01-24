@@ -123,15 +123,15 @@ img {
 }
 
 /* Adjustments for mobile devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 896px) {
     /* Centering special GIF and special GIF 2 for mobile */
     #special-gif {
         position: fixed;
         top: 50%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 400vw; /* Adjust width for better mobile fit */
-        height: auto;
+        width: 896vw; /* Adjust width for better mobile fit */
+        height: 300vw;
         z-index: -1;
     }
 
@@ -147,8 +147,8 @@ img {
 
     /* Adjusting the logo position */
     .logo {
-        position: absolute;
-        top: -10vh; /* Centered at the top of the screen */
+        position: fixed;
+        bottom: 90vh; /* Centered at the top of the screen */
         left: 50%;
         transform: translateX(-50%); /* Center horizontally */
         width: 15vw; /* Smaller size for mobile */
