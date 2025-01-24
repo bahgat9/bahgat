@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     padding: 0;
     margin: 0;
@@ -6,149 +5,205 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Body Styling */
 body {
     height: 100vh;
     background-image: linear-gradient(-225deg, #000000 0%, #000000 53%, #000000 100%);
 }
 
-/* Logo Styling */
 .logo {
-    position: fixed;
-    top: 2vh;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 25vw; /* Adjust for mobile size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Round logo */
-    z-index: 10; /* Ensure visibility */
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: -70%;
+    transform: translateX(-50%);
+    width: 80px; /* Smaller size for mobile */
+    height: 80px; /* Maintain square aspect ratio */
+    border-radius: 50%; /* Make the logo round */
 }
 
-/* Wrapper Styling */
 .wrapper {
     width: 90%;
-    max-width: 90vw;
-    max-height: 85vh;
+    max-width: 35.37em;
+    max-height: 90vh;
     background-color: #ffffff;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    padding: 2em;
+    padding: 2em; /* Reduced padding */
     border-radius: 1em;
     box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
 }
 
-/* Wrapper Title */
 .wrapper > h1 {
-    font-size: 1.2em; /* Adjusted for mobile */
+    font-size: 1.5em; /* Smaller font size */
     text-align: center;
-    margin-bottom: 1em;
+    margin-bottom: 15px; /* Reduced margin */
 }
 
-/* Container Styling */
 .container {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-/* Wheel Styling */
 #wheel {
-    width: 100%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
+    max-height: inherit;
+    width: 100%;
+    top: 0;
     padding: 0;
 }
 
-/* Spin Button */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 #spin-btn {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    height: 20%; /* Adjust for smaller size */
-    width: 20%; /* Responsive size */
+    height: 20%; /* Smaller button */
+    width: 20%; /* Smaller button */
     border-radius: 50%;
     cursor: pointer;
-    border: none;
+    border: 0;
     background: #484848;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 1em; /* Smaller font size */
+    font-size: 1.2em; /* Smaller font size */
+    letter-spacing: 0.1em;
     font-weight: 600;
-    letter-spacing: 0.05em; /* Slightly reduced spacing */
 }
 
-/* Image Styling */
 img {
     position: absolute;
-    width: 3em; /* Reduced size */
+    width: 3em; /* Smaller spinner arrow */
     top: 45%;
     right: -8%;
 }
 
-/* Final Value Text */
 #final-value {
-    font-size: 1em; /* Adjusted for mobile */
+    font-size: 1.2em; /* Smaller font size */
     text-align: center;
     margin-top: 1em;
     color: #000000;
     font-weight: 500;
 }
 
-/* Special GIF Adjustments */
-#special-gif, #special-gif2 {
+#special-gif {
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 40vw; /* Adjusted width */
+    right: 20%; /* Position it a little to the left (adjust as needed) */
+    transform: translateY(-50%); /* Center vertically */
+    width: 800px; /* Smaller size for mobile */
     height: auto; /* Maintain aspect ratio */
-    z-index: -1; /* Keep below other elements */
+    z-index: -1; /* Ensure it's below the wrapper and other elements */
 }
 
-/* Message Text */
+#special-gif2 {
+    position: fixed;
+    top: 50%;
+    right: 0%; /* Position it a little to the left (adjust as needed) */
+    transform: translateY(-50%); /* Center vertically */
+    width: 300px; /* Smaller size for mobile */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 9978; /* Ensure it's below the wrapper and other elements */
+}
+
 #message {
     position: absolute;
-    left: 10px;
-    bottom: 10px;
-    color: white;
-    font-size: 14px; /* Smaller font size */
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 5px;
-    border-radius: 5px;
+    left: 30px; /* Adjust the position from the left edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure it is centered vertically */
+    color: white; /* White text */
+    font-size: 18px; /* Smaller font size */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a dark background for contrast */
+    padding: 8px; /* Smaller padding */
+    border-radius: 5px; /* Optional: rounded corners */
 }
 
-/* Adjustments for Mobile Screens */
-@media screen and (max-width: 768px) {
+/* Adjustments for mobile devices */
+@media screen and (max-width: 896px) {
+    /* Centering special GIF and special GIF 2 for mobile */
+    #special-gif {
+        position: fixed;
+        top: 50%;
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 300px; /* Adjust width for better mobile fit */
+        height: auto; /* Maintain aspect ratio */
+        z-index: -1;
+    }
+
+    #special-gif2 {
+        position: fixed;
+        top: 50%;
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 200px; /* Adjust width for mobile */
+        height: auto;
+        z-index: 9978;
+    }
+
+    /* Adjusting the logo position */
     .logo {
-        width: 20vw; /* Smaller size for mobile */
+        position: fixed;
+        top: 1vh; /* Adjust to place it slightly below the top of the screen, or above the text */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 25vw; /* Adjust size for mobile */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%;
+        z-index: 10; /* Optional: Ensure the logo is above other content */
     }
 
+    /* Adjust wrapper position to sit just under the logo */
     .wrapper {
-        width: 85%;
-        padding: 1.5em;
+        position: absolute;
+        top: 15vh; /* Push wrapper under the logo */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85vw; /* Smaller for mobile */
+        max-width: 90vw;
+        background-color: #ffffff;
+        padding: 1.5em; /* Reduced padding */
+        border-radius: 1em;
+        box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
     }
 
+    /* Heading inside the wrapper */
     .wrapper > h1 {
-        font-size: 1em;
+        font-size: 1.3em; /* Smaller font size */
+        margin-bottom: 1em; /* Reduced margin */
     }
 
+    /* Spin button for mobile */
     #spin-btn {
-        height: 18%; /* Adjusted size */
-        width: 18%;
-        font-size: 0.9em;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        height: 15%; /* Smaller button */
+        width: 15%; /* Smaller button */
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+        background: #484848;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 1em; /* Smaller font size */
+        font-weight: 600;
+        letter-spacing: 0.1em;
     }
 
+    /* Final value text */
     #final-value {
-        font-size: 0.9em;
-    }
-
-    #wheel {
-        width: 100%;
-    }
-
-    #special-gif, #special-gif2 {
-        width: 35vw; /* Even smaller for mobile */
+        font-size: 1em; /* Smaller font size */
+        text-align: center;
+        margin-top: 1em;
+        color: #000000;
+        font-weight: 500;
     }
 }
