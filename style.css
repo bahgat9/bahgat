@@ -130,8 +130,8 @@ img {
         top: 50%;
         left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 500vw; /* Adjust width for better mobile fit */
-        height: 200vw;
+        width: 380; /* Adjust width for better mobile fit */
+        height: 190vw;
         z-index: -1;
     }
 
@@ -146,14 +146,15 @@ img {
     }
 
     /* Adjusting the logo position */
-    .logo {
+     .logo {
         position: fixed;
-         /* Centered at the top of the screen */
+        top: env(safe-area-inset-top); /* Adjust to be below the notch */
         left: 50%;
-        transform: translateX(-50%,-95%); /* Center horizontally */
-        width: 40vw; /* Smaller size for mobile */
+        transform: translateX(-50%); /* Center horizontally */
+        width: 28vw; /* Adjust size for mobile */
         height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
+        z-index: 10; /* Optional: Ensure the logo is above other content */
     }
 
     /* Adjust wrapper position to sit just under the logo */
@@ -202,6 +203,17 @@ img {
         margin-top: 1em;
         color: #000000;
         font-weight: 500;
+    }
+    #message {
+        position: absolute;
+        left: 30px; /* Adjust the position from the left edge */
+        bottom: 20px; /* Position it 20px from the bottom */
+        transform: translateY(0); /* Remove vertical centering, as it's now at the bottom */
+        color: white; /* White text */
+        font-size: 20px; /* Adjust font size as needed */
+        background-color: rgba(0, 0, 0, 0.5); /* Optional: add a dark background for contrast */
+        padding: 10px; /* Optional: padding for spacing */
+        border-radius: 5px; /* Optional: rounded corners */
     }
 }
 
