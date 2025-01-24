@@ -135,9 +135,9 @@ img {
     /* Adjusting the logo position */
     .logo {
         position: absolute;
-        top: 1px; /* Position above the wrapper */
+        top: -10px; /* Position above the wrapper */
         left: 50%; /* Center horizontally */
-        translate(-50%, -50%); /* Center horizontally */
+        translate(-50%, -100%); /* Center horizontally */
         width: 80px; /* Smaller size for mobile */
         height: 80px; /* Maintain square aspect ratio */
         z-index: 10; /* Ensure the logo is above other content */
@@ -159,7 +159,7 @@ img {
 
     /* Heading inside the wrapper */
     .wrapper > h1 {
-        font-size: 0.7em;
+        font-size: 1.5em;
         margin-bottom: 1em;
     }
 
