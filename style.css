@@ -124,58 +124,56 @@ img {
 
 /* Adjustments for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Special GIF behind everything and covering the whole screen */
+    /* Centering special GIF and special GIF 2 for mobile */
     #special-gif {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 500vw; /* Full screen width */
-        height: 300vh; /* Full screen height */
-        z-index: -2; /* Behind everything */
+        top: 50%;
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 400vw; /* Adjust width for better mobile fit */
+        height: auto;
+        z-index: -1;
     }
 
     #special-gif2 {
         position: fixed;
         top: 50%;
-        left: 50%;
+        left: 50%; /* Center horizontally */
         transform: translate(-50%, -50%);
-        width: 30vw; /* Adjust width as needed */
+        width: 30vw; /* Adjust width for mobile */
         height: auto;
-        z-index: 9999; /* Above everything */
+        z-index: 9978;
     }
 
-    /* Adjusting the logo to be above the wrapper */
+    /* Adjusting the logo position */
     .logo {
         position: absolute;
-        top: 0vh; /* Position it slightly below the top */
+        top: -10vh; /* Centered at the top of the screen */
         left: 50%;
-        transform: translateX(-50%);
-        width: 15vw; /* Adjust size */
-        height: auto;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 15vw; /* Smaller size for mobile */
+        height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
-        z-index: 1; /* Ensure it is above the GIF and below the wrapper */
     }
 
-    /* Adjust wrapper to be under the logo */
+    /* Adjust wrapper position to sit just under the logo */
     .wrapper {
         position: absolute;
-        top: 18vh; /* Adjust the space between the logo and wrapper */
+        top: 15vh; /* Push wrapper under the logo */
         left: 50%;
         transform: translateX(-50%);
-        width: 85vw;
+        width: 85vw; /* Smaller for mobile */
         max-width: 90vw;
         background-color: #ffffff;
-        padding: 1.2em;
+        padding: 1.5em;
         border-radius: 1em;
-        box-shadow: 0 3em 4em rgba(27, 8, 53, 0.2);
-        z-index: 2; /* Ensure it is above the first GIF but below the logo */
+        box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
     }
 
     /* Heading inside the wrapper */
     .wrapper > h1 {
-        font-size: 1.3em;
+        font-size: 1.5em;
         margin-bottom: 1em;
-        text-align: center;
     }
 
     /* Spin button for mobile */
@@ -184,22 +182,22 @@ img {
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        height: 15%;
-        width: 15%;
+        height: 20%;
+        width: 20%;
         border-radius: 50%;
         cursor: pointer;
         border: 0;
         background: #484848;
         color: #ffffff;
         text-transform: uppercase;
-        font-size: 1em;
+        font-size: 1.2em;
         font-weight: 600;
         letter-spacing: 0.1em;
     }
 
     /* Final value text */
     #final-value {
-        font-size: 1.1em;
+        font-size: 1.2em;
         text-align: center;
         margin-top: 1em;
         color: #000000;
