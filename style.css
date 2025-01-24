@@ -124,14 +124,14 @@ img {
 
 /* Adjustments for mobile devices */
 @media screen and (max-width: 768px) {
-    /* Centering special GIF behind the wrapper and making it full screen */
+    /* Special GIF behind everything and covering the whole screen */
     #special-gif {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw; /* Full screen width */
-        height: 100vh; /* Full screen height */
-        z-index: -1; /* Placing it behind the wrapper */
+        width: 500vw; /* Full screen width */
+        height: 300vh; /* Full screen height */
+        z-index: -2; /* Behind everything */
     }
 
     #special-gif2 {
@@ -139,27 +139,27 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 25vw;
+        width: 30vw; /* Adjust width as needed */
         height: auto;
-        z-index: 2;
+        z-index: 9999; /* Above everything */
     }
 
-    /* Adjusting the logo position to be on top of the wrapper */
+    /* Adjusting the logo to be above the wrapper */
     .logo {
         position: absolute;
-        top: 5vh; /* Position it slightly below the top */
+        top: 0vh; /* Position it slightly below the top */
         left: 50%;
         transform: translateX(-50%);
         width: 15vw; /* Adjust size */
         height: auto;
         border-radius: 50%;
-        z-index: 1; /* Ensure it appears above the GIF */
+        z-index: 1; /* Ensure it is above the GIF and below the wrapper */
     }
 
-    /* Adjust wrapper position to sit just under the logo */
+    /* Adjust wrapper to be under the logo */
     .wrapper {
         position: absolute;
-        top: 18vh; /* Adjusted space for the logo above */
+        top: 18vh; /* Adjust the space between the logo and wrapper */
         left: 50%;
         transform: translateX(-50%);
         width: 85vw;
@@ -168,7 +168,7 @@ img {
         padding: 1.2em;
         border-radius: 1em;
         box-shadow: 0 3em 4em rgba(27, 8, 53, 0.2);
-        z-index: 3; /* Ensure it's above the GIF */
+        z-index: 2; /* Ensure it is above the first GIF but below the logo */
     }
 
     /* Heading inside the wrapper */
