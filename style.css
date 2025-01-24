@@ -204,17 +204,7 @@ img {
         color: #000000;
         font-weight: 500;
     }
-    #message {
-        position: absolute;
-        left: 30px; /* Adjust the position from the left edge */
-        bottom: 20px; /* Position it 20px from the bottom */
-        transform: translateY(0); /* Remove vertical centering, as it's now at the bottom */
-        color: white; /* White text */
-        font-size: 20px; /* Adjust font size as needed */
-        background-color: rgba(0, 0, 0, 0.5); /* Optional: add a dark background for contrast */
-        padding: 10px; /* Optional: padding for spacing */
-        border-radius: 5px; /* Optional: rounded corners */
-    }
+    
 }
 
 
