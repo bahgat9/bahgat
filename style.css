@@ -141,9 +141,9 @@ img {
         position: fixed;
         top: 1vh;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -60%);
         width: 15vw;
-        max-width: 80px;
+        max-width: 120px;
         height: auto;
         border-radius: 50%;
         z-index: 10;
