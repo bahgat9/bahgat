@@ -12,13 +12,12 @@ body {
 
 .logo {
     position: absolute;
-    top: 10px; /* Adjusted to position above the wrapper */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    width: 80px; /* Smaller size for mobile */
-    height: 80px; /* Maintain square aspect ratio */
+    top: -30px; /* Adjust as needed */
+    left: -70%;
+    transform: translateX(-50%);
+    width: 120px; /* 20% bigger than the original 100px */
+    height: 120px; /* Maintain square aspect ratio */
     border-radius: 50%; /* Make the logo round */
-    z-index: 10; /* Ensure the logo is above other content */
 }
 
 .wrapper {
@@ -135,9 +134,9 @@ img {
     /* Adjusting the logo position */
     .logo {
         position: absolute;
-        top: -10px; /* Position above the wrapper */
+        top: -30px; /* Adjust as needed */
         left: 50%; /* Center horizontally */
-        translate(-50%, -100%); /* Center horizontally */
+        transform: translateX(-50%);
         width: 80px; /* Smaller size for mobile */
         height: 80px; /* Maintain square aspect ratio */
         z-index: 10; /* Ensure the logo is above other content */
