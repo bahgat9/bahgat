@@ -153,8 +153,8 @@ img {
         position: fixed;
         top: 1vh; /* Adjust to place it slightly below the top of the screen, or above the text */
         left: 50%;
-        transform: translateX(-50%);
-        transform: translateY(-90%);/* Center horizontally */
+        transform: translateX(-55%);
+        transform: translateY(-95%);/* Center horizontally */
         width: 28vw; /* Adjust size for mobile */
         height: auto; /* Maintain aspect ratio */
         border-radius: 50%;
