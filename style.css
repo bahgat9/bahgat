@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(-225deg, #000000 0%, #000000 53%, #000000 100%);
+}
+
+.logo {
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: -70%;
+    transform: translateX(-50%);
+    width: 120px; /* 20% bigger than the original 100px */
+    height: 120px; /* Maintain square aspect ratio */
+    border-radius: 50%; /* Make the logo round */
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 35.37em;
+    max-height: 90vh;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3em;
+    border-radius: 1em;
+    box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+}
+
+.wrapper > h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#wheel {
+    max-height: inherit;
+    width: 100%;
+    top: 0;
+    padding: 0;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#spin-btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 25%;
+    width: 25%;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 0;
+    background: #484848;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+img {
+    position: absolute;
+    width: 4em;
+    top: 45%;
+    right: -8%;
+}
+
+#final-value {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1.5em;
+    color: #000000;
+    font-weight: 500;
+}
+#special-gif {
+    position: fixed;
+    top: 50%;
+    right: 20%; /* Position it a little to the left (adjust as needed) */
+    transform: translateY(-50%); /* Center vertically */
+    width: 1000px; /* 40% bigger than 150px, so 150 * 1.4 = 210px */
+    height: 1200; /* Maintain aspect ratio */
+    z-index: -1; /* Ensure it's below the wrapper and other elements */
+}
+#special-gif2 {
+    position: fixed;
+    top: 50%;
+    right: 0%; /* Position it a little to the left (adjust as needed) */
+    transform: translateY(-50%); /* Center vertically */
+    width: 400px; /* 40% bigger than 150px, so 150 * 1.4 = 210px */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 9978; /* Ensure it's below the wrapper and other elements */
+}
+
+#message {
+    position: absolute;
+    left: 30px; /* Adjust the position from the left edge */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Ensure it is centered vertically */
+    color: white; /* White text */
+    font-size: 20px; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a dark background for contrast */
+    padding: 10px; /* Optional: padding for spacing */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Centering special GIF and special GIF 2 for mobile */
+    #special-gif {
+        position: fixed;
+        top: 50%;
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 35vw; /* Adjust width for better mobile fit */
+        height: auto;
+        z-index: -1;
+    }
+
+    #special-gif2 {
+        position: fixed;
+        top: 50%;
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 30vw; /* Adjust width for mobile */
+        height: auto;
+        z-index: 9978;
+    }
+
+    /* Adjusting the logo position */
+    .logo {
+        position: absolute;
+        top: 5vh; /* Centered at the top of the screen */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        width: 15vw; /* Smaller size for mobile */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%;
+    }
+
+    /* Adjust wrapper position to sit just under the logo */
+    .wrapper {
+        position: absolute;
+        top: 15vh; /* Push wrapper under the logo */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85vw; /* Smaller for mobile */
+        max-width: 90vw;
+        background-color: #ffffff;
+        padding: 1.5em;
+        border-radius: 1em;
+        box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+    }
+
+    /* Heading inside the wrapper */
+    .wrapper > h1 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    /* Spin button for mobile */
+    #spin-btn {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        height: 20%;
+        width: 20%;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 0;
+        background: #484848;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+
+    /* Final value text */
+    #final-value {
+        font-size: 1.2em;
+        text-align: center;
+        margin-top: 1em;
+        color: #000000;
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Small mobile devices adjustments */
+    #special-gif {
+        width: 40vw; /* Adjust to smaller mobile screens */
+    }
+
+    #special-gif2 {
+        width: 40vw; /* Adjust to smaller mobile screens */
+    }
+
+    /* Adjust wrapper for very small devices */
+    .wrapper {
+        top: 18vh; /* Ensure wrapper sits just below the logo on small screens */
+    }
+
+    /* Spin button for smaller devices */
+    #spin-btn {
+        height: 18%;
+        width: 18%;
+        font-size: 1em;
+    }
+
+    /* Smaller font size for final value */
+    #final-value {
+        font-size: 1em;
+        margin-top: 0.8em;
+    }
+
+    /* Logo adjustments for small screens */
+    .logo {
+        top: 4vh; /* Position the logo slightly higher on smaller screens */
+        width: 18vw; /* Slightly larger for very small screens */
+    }
+}
